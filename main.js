@@ -131,6 +131,14 @@ function displayResults(data) {
     });
 }
 
+//Clear Button Functionality
+const clearButton = document.getElementById('clear-button');
+
+clearButton.addEventListener('click', function() {
+    // Clear the search input
+    searchInput.value = '';
+});
+
 // ============================================
 // THAT'S IT! Your cake shop search is ready!
 // ============================================

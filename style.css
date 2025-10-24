@@ -229,7 +229,22 @@ body {
     .search-button {
         width: 100%;  /* Button takes full width */
     }
+    .clear-button {
+        padding: 15px 40px;
+        font-size: 16px;
+        font-weight: 600;
+        background-color: #666;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;  /* Makes cursor a pointer when hovering */
+        font-family: 'Quicksand', sans-serif;
+        transition: background-color 0.3s;
+    }
     
+    .clear-button:hover {
+        background-color: #444;  /* Darker gray on hover */
+    }
     /* Images - Single column */
     .cake-image {
         width: 100%;  /* Each image takes full width = 1 column */
