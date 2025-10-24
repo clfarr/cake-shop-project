@@ -94,7 +94,7 @@ function searchGiphy(searchTerm) {
         .catch(function(error) {
             // If something goes wrong, show an error message
             console.error('Error fetching data:', error);
-            resultsContainer.innerHTML = '<p class="initial-message">Oops! Something went wrong. Please try again. 😞</p>';
+            resultsContainer.innerHTML = '<p class="error-message">⚠️ Oops! Please add your Giphy API key in main.js to use the search feature.</p>';
         });
 }
 
