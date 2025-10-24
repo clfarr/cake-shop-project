@@ -218,6 +218,22 @@ body {
     animation: fadeIn 0.5s ease-in-out;
 }
 
+/* Your existing cake-image styles... */
+
+/* Placeholder animation */
+@keyframes placeholderShift {
+    0%, 100% {
+        opacity: 1;
+}
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.search-input::placeholder {
+    animation: placeholderShift 3s ease-in-out infinite;
+}
+
 /* ============================================
    FOOTER
    ============================================ */
