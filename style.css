@@ -111,7 +111,7 @@ body {
 
 .search-input:focus {
     border-color: #e91e63;  /* Changes border color when you click in it */
-    box-shadown: 0 0 10px rgba(233,30,99,0.3);
+    box-shadow: 0 0 10px rgba(233,30,99,0.3);
     transform: scale(1.02);
 }
 
@@ -306,11 +306,12 @@ body {
         border-radius: 25px;
         cursor: pointer;  /* Makes cursor a pointer when hovering */
         font-family: 'Quicksand', sans-serif;
-        transition: background-color 0.3s;
+        transition: background-color all 0.3s;
     }
     
     .clear-button:hover {
         background-color: #444;  /* Darker gray on hover */
+        transform: scale(1.05);
     }
     /* Images - Single column */
     .cake-image {
