@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Treats Cake Shop - Wireframes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #d4527c;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+        
+        .wireframe-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .wireframe {
+            background: white;
+            border: 3px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .desktop-wireframe {
+            width: 800px;
+        }
+        
+        .mobile-wireframe {
+            width: 350px;
+        }
+        
+        .wireframe h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #d4527c;
+            font-size: 1.8em;
+        }
+        
+        .device-frame {
+            border: 2px solid #333;
+            background: #fff;
+            padding: 15px;
+        }
+        
+        /* Header Styles */
+        .header {
+            border: 2px dashed #999;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffe6f0;
+        }
+        
+        .mobile-wireframe .header {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .site-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d4527c;
+            border: 2px solid #d4527c;
+            padding: 10px 20px;
+            background: white;
+        }
+        
+        .mobile-wireframe .site-title {
+            font-size: 20px;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .mobile-wireframe .nav {
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+        }
+        
+        .nav-item {
+            border: 2px solid #666;
+            padding: 8px 16px;
+            background: white;
+            text-align: center;
+        }
+        
+        /* Search Section */
+        .search-section {
+            border: 2px dashed #999;
+            padding: 30px;
+            margin-bottom: 20px;
+            background: #fff9e6;
+        }
+        
+        .search-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .search-controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .mobile-wireframe .search-controls {
+            flex-direction: column;
+        }
+        
+        .search-input {
+            flex: 1;
+            border: 2px solid #666;
+            padding: 15px;
+            background: white;
+            text-align: center;
+        }
+        
+        .search-button {
+            border: 2px solid #d4527c;
+            padding: 15px 30px;
+            background: #d4527c;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .mobile-wireframe .search-button {
+            padding: 15px;
+        }
+        
+        /* Results Grid */
+        .results-section {
+            border: 2px dashed #999;
+            padding: 20px;
+            background: #e6f7ff;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #333;
+        }
+        
+        .image-grid {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .desktop-wireframe .image-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .mobile-wireframe .image-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .image-placeholder {
+            border: 2px solid #666;
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+            color: #999;
+            font-style: italic;
+        }
+        
+        /* Annotations */
+        .annotation {
+            background: #ffffcc;
+            border-left: 4px solid #ffcc00;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .annotation strong {
+            color: #333;
+        }
+        
+        .notes {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+        
+        .notes h3 {
+            color: #d4527c;
+            margin-bottom: 10px;
+        }
+        
+        .notes ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>🍰 Sweet Treats Cake Shop</h1>
+    <p class="subtitle">Project Wireframes - Desktop & Mobile Views</p>
+    
+    <div class="wireframe-container">
+        <!-- DESKTOP WIREFRAME -->
+        <div class="wireframe desktop-wireframe">
+            <h2>📱 Desktop View (768px+)</h2>
+            <div class="device-frame">
+                <!-- Header -->
+                <div class="header">
+                    <div class="site-title">Sweet Treats 🍰</div>
+                    <div class="nav">
+                        <div class="nav-item">Home</div>
+                        <div class="nav-item">Gallery</div>
+                        <div class="nav-item">About</div>
+                        <div class="nav-item">Contact</div>
+                    </div>
+                </div>
+                
+                <div class="annotation">
+                    <strong>Header:</strong> Uses flexbox with justify-content: space-between to align logo left and nav right
+                </div>
+                
+                <!-- Search Section -->
+                <div class="search-section">
+                    <div class="search-label">Search for Cakes:</div>
+                    <div class="search-controls">
+                        <div class="search-input">Search Input Field (type="search")</div>
+                        <div class="search-button">Search</div>
+                    </div>
+                </div>
+                
+                <div class="annotation">
+                    <strong>Search Bar:</strong> Input and button side-by-side using flexbox
+                </div>
+                
+                <!-- Results Grid -->
+                <div class="results-section">
+                    <div class="section-title">Search Results:</div>
+                    <div class="image-grid">
+                        <div class="image-placeholder">Cake Image 1<br>(from Giphy API)</div>
+                        <div class="image-placeholder">Cake Image 2<br>(from Giphy API)</div>
+                        <div class="image-placeholder">Cake Image 3<br>(from Giphy API)</div>
+                        <div class="image-placeholder">Cake Image 4<br>(from Giphy API)</div>
+                        <div class="image-placeholder">Cake Image 5<br>(from Giphy API)</div>
+                        <div class="image-placeholder">Cake Image 6<br>(from Giphy API)</div>
+                        <div class="image-placeholder">Cake Image 7<br>(from Giphy API)</div>
+                        <div class="image-placeholder">Cake Image 8<br>(from Giphy API)</div>
+                        <div class="image-placeholder">Cake Image 9<br>(from Giphy API)</div>
+                    </div>
+                </div>
+                
+                <div class="annotation">
+                    <strong>Image Grid:</strong> Custom CSS grid using flexbox, 3 columns on desktop
+                </div>
+            </div>
+            
+            <div class="notes">
+                <h3>Desktop Features:</h3>
+                <ul>
+                    <li>Horizontal header with logo and nav aligned to opposite sides</li>
+                    <li>Search input and button displayed side-by-side</li>
+                    <li>Images displayed in a 3-column grid layout</li>
+                    <li>Spacing and padding optimized for larger screens</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- MOBILE WIREFRAME -->
+        <div class="wireframe mobile-wireframe">
+            <h2>📱 Mobile View (≤320px)</h2>
+            <div class="device-frame">
+                <!-- Header -->
+                <div class="header">
+                    <div class="site-title">Sweet Treats 🍰</div>
+                    <div class="nav">
+                        <div class="nav-item">Home</div>
+                        <div class="nav-item">Gallery</div>
+                        <div class="nav-item">About</div>
+                        <div class="nav-item">Contact</div>
+                    </div>
+                </div>
+                
+                <div class="annotation">
+                    <strong>Header:</strong> Title and nav stack vertically using @media query
+                </div>
+                
+                <!-- Search Section -->
+                <div class="search-section">
+                    <div class="search-label">Search for Cakes:</div>
+                    <div class="search-controls">
+                        <div class="search-input">Search Input</div>
+                        <div class="search-button">Search</div>
+                    </div>
+                </div>
+                
+                <div class="annotation">
+                    <strong>Search:</strong> Input and button stack vertically
+                </div>
+                
+                <!-- Results Grid -->
+                <div class="results-section">
+                    <div class="section-title">Results:</div>
+                    <div class="image-grid">
+                        <div class="image-placeholder">Cake Image 1</div>
+                        <div class="image-placeholder">Cake Image 2</div>
+                        <div class="image-placeholder">Cake Image 3</div>
+                        <div class="image-placeholder">Cake Image 4</div>
+                    </div>
+                </div>
+                
+                <div class="annotation">
+                    <strong>Grid:</strong> Single column layout for easy mobile scrolling
+                </div>
+            </div>
+            
+            <div class="notes">
+                <h3>Mobile Features (@media query):</h3>
+                <ul>
+                    <li>Site title and nav stack vertically</li>
+                    <li>Navigation items in vertical list</li>
+                    <li>Search controls stack vertically</li>
+                    <li>Images in single column (1 per row)</li>
+                    <li>Touch-friendly button sizes</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div style="max-width: 1400px; margin: 40px auto; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <h2 style="color: #d4527c; margin-bottom: 20px;">📋 Design Notes for Implementation:</h2>
+        <ul style="line-height: 2; margin-left: 20px;">
+            <li><strong>Color Scheme:</strong> Consider pinks, pastels, warm tones (bakery theme)</li>
+            <li><strong>Google Font:</strong> Try something fun like "Quicksand", "Pacifico", or "Satisfy"</li>
+            <li><strong>Flexbox Usage:</strong> Header alignment, search controls, and custom grid classes</li>
+            <li><strong>Responsive Breakpoint:</strong> @media query at max-width: 320px</li>
+            <li><strong>API Integration:</strong> Display GIF/images from Giphy based on search terms like "birthday cake", "chocolate cake", etc.</li>
+            <li><strong>User Experience:</strong> Loading states, empty state messaging, error handling</li>
+        </ul>
+    </div>
+</body>
+</html>
