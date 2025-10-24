@@ -112,6 +112,12 @@ function displayResults(data) {
         return;
     }
     
+    // Add a count message
+    const countMessage = document.createElement('p');
+    countMessage.className = 'results-count';
+    countMessage.textContent = `Found ${data.data.length} delicious results! 🍰`;
+    resultsContainer.appendChild(countMessage);
+    
     // Loop through each result from Giphy
     data.data.forEach(function(gif) {
         // Get the image URL from the gif object
