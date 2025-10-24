@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+/* Smooth scroling for entire page */
+html {
+    scroll-behavior: smooth;
+
 /* BODY - Overall page styling */
 body {
     font-family: 'Quicksand', sans-serif;  /* The Google Font we imported */
