@@ -132,6 +132,33 @@ body {
     background-color: #c2185b;  /* Darker pink on hover */
 }
 
+/* Better spacing for mobile search section */
+.search-section {
+    padding: 20px 15px;
+    margin: 15px 0;
+}
+
+.search-section h1 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 12px 15px;
+    font-size: 14px;
+}
+
+.search-button,
+.clear-button {
+    padding: 12px 30px;
+    font-size: 14px;
+}
+
 /* ============================================
    RESULTS SECTION - Image Grid
    ============================================ */
