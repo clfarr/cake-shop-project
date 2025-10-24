@@ -27,7 +27,7 @@ body {
     display: flex;  /* Makes items arrange in a row */
     justify-content: space-between;  /* Pushes items to opposite sides */
     align-items: center;  /* Centers items vertically */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .site-title {
