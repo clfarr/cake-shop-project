@@ -48,9 +48,35 @@ searchForm.addEventListener('submit', function(event) {
 // ============================================
 
 function searchGiphy(searchTerm) {
-    // Show a loading message
-    resultsContainer.innerHTML = '<p class="initial-message">Searching for delicious cakes... 🔍</p>';
+    // Check if API key is set
+    if (API_KEY === 'YOUR_API_KEY_HERE' || API_KEY === '') {
+        resultsContainer.innerHTML = '<p class="initial-message">⚠️ Oops! Please add your Giphy API key in main.js to use the search feature.</p>';
+        return;
+    }
     
+    // Show a loading message
+    resultsContainer.innerHTML = '<p class="loading">Searching for delicious cakes... 🔍</p>';
+    
+    // Build the complete URL with our search term
+    // We're asking for 12 results, rated G (family-friendly)
+    const url = `${API_URL}?api_key=${API_KEY}&q=${searchTerm}&limit=12&rating=g`;
+    
+    // Make the request to Giphy
+    fetch(url)
+        .then(function(response) {
+            // Convert the response to JSON (JavaScript Object)
+            return response.json();
+        })
+        .then(function(data) {
+            // Call our function to display the images
+            displayResults(data);
+        })
+        .catch(function(error) {
+            // If something goes wrong, show an error message
+            console.error('Error fetching data:', error);
+            resultsContainer.innerHTML = '<p class="initial-message">Oops! Something went wrong. Please try again. 😞</p>';
+        });
+}
     // Build the complete URL with our search term
     // We're asking for 12 results, rated G (family-friendly)
     const url = `${API_URL}?api_key=${API_KEY}&q=${searchTerm}&limit=12&rating=g`;
