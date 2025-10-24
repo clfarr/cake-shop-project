@@ -167,6 +167,27 @@ body {
     transform: scale(1.05);  /* Makes image slightly bigger on hover */
 }
 
+/* Fade-in animation for images */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    transform: translateY(20px);
+    )
+    to { 
+        opacity: 1; 
+        transform: translateY(0); }
+    }
+)
+
+.cake-image {
+    width: calc(3333.333% - 14px);  /* 3 columns on desktop (33.333% each minus gap) */
+    height: 250px;
+    object-fit: cover;  /* Makes sure image fills the space nicely */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;  /* Smooth animation */    
+    animation: fadeIn 0.5s ease-in-out;
+}
+
 /* ============================================
    FOOTER
    ============================================ */
