@@ -106,10 +106,13 @@ body {
     border-radius: 25px;
     font-family: 'Quicksand', sans-serif;
     outline: none;
+    transition: all 0.3s ease;
 }
 
 .search-input:focus {
     border-color: #e91e63;  /* Changes border color when you click in it */
+    box-shadown: 0 0 10px rgba(233,30,99,0.3);
+    transform: scale(1.02);
 }
 
 .search-button {
