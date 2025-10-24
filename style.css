@@ -1,0 +1,245 @@
+/* ============================================
+   SWEET TREATS CAKE SHOP - STYLESHEET
+   ============================================ */
+
+/* RESET - Makes sure all browsers start the same */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY - Overall page styling */
+body {
+    font-family: 'Quicksand', sans-serif;  /* The Google Font we imported */
+    background-color: #fff5f8;  /* Light pink background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ============================================
+   HEADER SECTION - Desktop View
+   ============================================ */
+
+.header {
+    background-color: #ff9eb7;  /* Pretty pink color */
+    padding: 20px 40px;
+    display: flex;  /* Makes items arrange in a row */
+    justify-content: space-between;  /* Pushes items to opposite sides */
+    align-items: center;  /* Centers items vertically */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.site-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Navigation Menu */
+.nav {
+    display: flex;  /* Makes nav items appear in a row */
+    gap: 25px;  /* Space between nav items */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;  /* Removes underline */
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s;  /* Smooth color change on hover */
+}
+
+.nav-link:hover {
+    color: #ffe0e8;  /* Lighter pink when you hover */
+}
+
+/* ============================================
+   MAIN CONTENT AREA
+   ============================================ */
+
+.main-content {
+    max-width: 1200px;  /* Keeps content centered and not too wide */
+    margin: 0 auto;  /* Centers the content */
+    padding: 20px;
+}
+
+/* ============================================
+   SEARCH SECTION
+   ============================================ */
+
+.search-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 15px;
+    margin: 30px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.search-section h1 {
+    font-size: 42px;
+    color: #e91e63;  /* Bright pink */
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Search Form - Input and Button Side by Side */
+.search-form {
+    display: flex;  /* Makes input and button appear side by side */
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;  /* Centers the form */
+}
+
+.search-input {
+    flex: 1;  /* Makes input take up most of the space */
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 2px solid #ff9eb7;
+    border-radius: 25px;
+    font-family: 'Quicksand', sans-serif;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #e91e63;  /* Changes border color when you click in it */
+}
+
+.search-button {
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;  /* Makes cursor a pointer when hovering */
+    font-family: 'Quicksand', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #c2185b;  /* Darker pink on hover */
+}
+
+/* ============================================
+   RESULTS SECTION - Image Grid
+   ============================================ */
+
+.results-section {
+    margin: 30px 0;
+}
+
+.results-container {
+    display: flex;  /* Creates our custom grid using flexbox */
+    flex-wrap: wrap;  /* Allows items to wrap to next line */
+    gap: 20px;  /* Space between images */
+    justify-content: center;
+}
+
+/* Initial message before searching */
+.initial-message {
+    text-align: center;
+    font-size: 20px;
+    color: #999;
+    padding: 60px 20px;
+    width: 100%;
+}
+
+/* Individual cake image styling - This will be added by JavaScript */
+.cake-image {
+    width: calc(33.333% - 14px);  /* 3 columns on desktop (33.333% each minus gap) */
+    height: 250px;
+    object-fit: cover;  /* Makes sure image fills the space nicely */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;  /* Smooth animation */
+}
+
+.cake-image:hover {
+    transform: scale(1.05);  /* Makes image slightly bigger on hover */
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    background-color: #ff9eb7;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE DESIGN
+   Media Query for screens 320px and below
+   ============================================ */
+
+@media (max-width: 320px) {
+    
+    /* Header - Stack vertically */
+    .header {
+        flex-direction: column;  /* Changes from row to column */
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .site-title {
+        font-size: 24px;
+    }
+    
+    /* Navigation - Stack vertically */
+    .nav {
+        flex-direction: column;  /* Stack nav items vertically */
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .nav-link {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(255,255,255,0.2);
+        border-radius: 5px;
+    }
+    
+    /* Search Section */
+    .search-section h1 {
+        font-size: 28px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+    }
+    
+    /* Search Form - Stack vertically */
+    .search-form {
+        flex-direction: column;  /* Stack input and button vertically */
+    }
+    
+    .search-button {
+        width: 100%;  /* Button takes full width */
+    }
+    
+    /* Images - Single column */
+    .cake-image {
+        width: 100%;  /* Each image takes full width = 1 column */
+        height: 200px;
+    }
+}
+
+/* Medium screens (tablets and small laptops) */
+@media (max-width: 768px) and (min-width: 321px) {
+    .cake-image {
+        width: calc(50% - 10px);  /* 2 columns on tablets */
+    }
+}

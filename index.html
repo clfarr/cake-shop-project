@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This section contains information about your page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Treats Cake Shop</title>
+
+    <!-- Link to your CSS file for styling -->
+     <link rel="stylesheet" href="styles.css">
+
+     <!-- Google Font - A fun font for a cake shop! -->
+     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">     
+</head>
+<body>
+
+    <!-- HEADER SECTION - Contains logo and navigation -->
+     <header class="header">
+        <div class="site-title">
+           🍰 Sweet Treats 
+        </div>
+        <nav class="nav">
+            <a herf="#" class="nav-link">Home</a>
+            <a herf="#" class="nav-link">Gallery</a>
+            <a herf="#" class="nav-link">About</a>
+            <a herf="#" class="nav-link">Contact</a>
+        </nav>
+</header>
+
+    <!-- MAIN CONTENT SECTION -->
+    <main class="main-content">
+
+        <!-- SEARCH SECTION - Where users serach for cakes -->
+        <section class="search-section">
+            <h1>Find Your Perfect Cake! 🎂</h1>
+            <p class="subtitle">Search for birthday cakes, wedding cakes, cupcakes, and more!</p>
+
+            <!-- Search Form -->
+             <form id="search-form" class="search-form">
+                <input
+                    type="search"
+                    id="search-input"
+                    class="search-input"
+                    placeholder="Try 'birthday cake' or 'chocolate cake'..."
+                    required
+            >
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </section>
+
+        <!-- RESULTS SECTION - Where cake images will appear -->
+        <section class="results-section">
+            <div id="results-container" class=""results-container">
+                <!-- Images from Giphy will be added here by JavaScript -->
+                 <p class="initial-message">Start searching to see delicious cake images! 🍰</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <p>&copy; 2024 Sweet Treats Cake Shop. | Made with ❤️ and flour</p>
+    </footer>
+
+    <!-- Link to your JavaScript file - this goes at the end -->
+    <script src="main.js"></script>
+</body>
+</html>
