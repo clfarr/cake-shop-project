@@ -1,8 +1,5 @@
 # 🍰 Sweet Treats Cake Shop
 
-## Your Name
-Caroline Farr
-
 ## Overview/Description
 Sweet Treats Cake Shop is an interactive web application that allows users to search for cake images and GIFs using the Giphy API. This project was created as part of a software engineering bootcamp to demonstrate proficiency in HTML, CSS, JavaScript, API integration, and responsive web design.
 
