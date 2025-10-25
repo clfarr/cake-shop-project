@@ -255,7 +255,7 @@ body {
    Media Query for screens 320px and below
    ============================================ */
 
-@media (max-width: 320px) {
+@media (max-width: 768px) {
     
     /* Header - Stack vertically */
     .header {
